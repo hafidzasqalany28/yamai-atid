@@ -7,7 +7,7 @@
     <div class="row g-0 flex-column-reverse flex-lg-row">
         <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
             <div class="header-bg h-100 d-flex flex-column justify-content-center p-5">
-                <h1 class="display-4 text-light mb-5">Nikmati Hari Libur Bersama Keluarga Anda</h1>
+                <h1 class="display-4 text-light mb-5">Nikmati Hari Libur Anda di Taman Yamai-Atid</h1>
                 <div class="d-flex align-items-center pt-4 animated slideInDown">
                     <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Selengkapnya</a>
                     <button type="button" class="btn-play" data-bs-toggle="modal"
@@ -67,13 +67,10 @@
                 <h1 class="display-5 mb-4">Mengapa Anda Harus Mengunjungi Taman <span
                         class="text-primary">Yamai-Atid</span> ???</h1>
                 <p class="mb-4">Terlalu sering kita terjebak dalam hiruk-pikuk kehidupan yang akhirnya membuat kita
-                    gampang stress. Namun ketika Anda memasuki Taman Yamai-Atid, Anda akan merasakan pesona alam yang
-                    begitu kuat sehingga menghipnotis Anda. Di sini, petualangan yang tak tertandingi menunggu Anda, di
-                    tengah keindahan alam dan keanekaragaman hayati yang luar biasa. Luangkan waktu anda dan segera
+                    gampang stress. Namun ketika Anda memasuki Taman Yamai-Atid, Stress anda dapat berkurang dengan melihat
+                    keanekaragaman flora dan fauna yang menyegarkan pikiran. Luangkan waktu anda dan segera
                     datang.</p>
                 <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Lingkungan Alami</h5>
-                <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Pemandu Profesional & Keamanan
-                </h5>
                 <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Fauna & Flora Yang unik</h5>
                 <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Memudahkan Interaksi dengan sistem
                     QR Code</h5>
@@ -81,7 +78,7 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="img-border">
-                    <img class="img-fluid" src="{{ asset('assets/img/about.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/rusa1.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -94,26 +91,26 @@
 <div class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-4">
-            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+            <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
                 <i class="fa fa-paw fa-3x text-primary mb-3"></i>
                 <h1 class="text-white mb-2" data-toggle="counter-up">{{ $faunaCount }}</h1>
                 <p class="text-white mb-0">Jenis Fauna</p>
             </div>
-            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+            <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.7s">
                 <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
                 <h1 class="text-white mb-2" data-toggle="counter-up">{{ $floraCount }}</h1>
                 <p class="text-white mb-0">Jenis Flora</p>
             </div>
-            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+            <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                 <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
                 <h1 class="text-white mb-2" data-toggle="counter-up">{{ $totalQuantity }}</h1>
                 <p class="text-white mb-0">Total Fauna & Flora</p>
             </div>
-            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+            {{-- <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                 <i class="fa fa-users fa-3x text-primary mb-3"></i>
                 <h1 class="text-white mb-2" data-toggle="counter-up">{{ $totalVisitors }}</h1>
                 <p class="text-white mb-0">Pengunjung Perhari</p>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -140,43 +137,41 @@
             </div>
         </div>
         <div class="row gy-5 gx-4">
-            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-2.png') }}" alt="Ikon">
-                <h5 class="mb-3">Parkir Mobil</h5>
-                <span>Kenyamanan Anda adalah prioritas kami. Nikmati parkir mobil gratis yang tersedia di Taman
-                    Yamai-Atid, sehingga Anda dapat menikmati pengalaman tanpa masalah mencari tempat parkir. Stet no et
-                    lorem et elitr dolor, diam stet diam sed ut vero eos.</span>
-            </div>
+                <h5 class="mb-3">Parkir lot</h5>
+                <span>Kenyamanan Anda adalah prioritas kami. Nikmati parkir lot gratis yang tersedia di Taman
+                    Yamai-Atid, sehingga Anda dapat menikmati pengalaman tanpa masalah mencari tempat parkir</span>
+            </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-3.png') }}" alt="Ikon">
                 <h5 class="mb-3">Swafoto & QR Code</h5>
                 <span>Dalam petualangan seru di Taman Yamai-Atid, abadikan momen Anda dengan foto-foto indah flora
                     maupun fauna
-                    kami, dan dapat melakukan QR Code untuk mengakses informasi eksklusif, Dari singa hingga
-                    bunga matahari, jadikan momen Anda tak terlupakan. Dapatkan wawasan mendalam tentang setiap flora &
+                    kami, dan dapat melakukan QR Code untuk mengakses informasi eksklusif, tentang setiap flora &
                     fauna dengan QR Code kami.</span>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-4.png') }}" alt="Ikon">
                 <h5 class="mb-3">Layanan Pemandu</h5>
                 <span>Tidak perlu khawatir saat menjelajah. Kami menyediakan layanan pemandu profesional yang akan
                     membimbing Anda sepanjang perjalanan Anda di Taman Yamai-Atid. Dapatkan informasi lengkap dan
                     pengetahuan yang mendalam tentang keanekaragaman hayati.</span>
-            </div>
+            </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-5.png') }}" alt="Ikon">
                 <h5 class="mb-3">Makanan & Minuman</h5>
                 <span>Menikmati petualangan memang melelahkan. Nikmati makanan dan minuman lezat yang tersedia di Taman
                     Yamai-Atid. Terdapat berbagai pilihan menu yang memuaskan selera.</span>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-6.png') }}" alt="Ikon">
                 <h5 class="mb-3">Toko Souvenir</h5>
                 <span>Bawa pulang kenangan dari petualangan Anda di Taman Yamai-Atid. Jelajahi berbagai pilihan produk
                     suvenir di toko kami, yang memungkinkan Anda membawa pulang potongan kecil dari keindahan
                     alam.</span>
-            </div>
+            </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-7.png') }}" alt="Ikon">
                 <h5 class="mb-3">Wi-Fi Cepat & Gratis</h5>
@@ -184,18 +179,18 @@
                     gratis di seluruh Taman Yamai-Atid, sehingga Anda dapat tetap terhubung dengan dunia digital selama
                     petualangan Anda.</span>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-8.png') }}" alt="Ikon">
                 <h5 class="mb-3">Area Bermain</h5>
                 <span>Bagi keluarga yang berkunjung bersama anak-anak, Taman Yamai-Atid memiliki area bermain yang
                     menyenangkan. Biarkan anak-anak Anda bermain dan bersenang-senang di area yang aman dan menyenangkan
                     ini.</span>
-            </div>
+            </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-9.png') }}" alt="Ikon">
-                <h5 class="mb-3">Rumah Istirahat</h5>
+                <h5 class="mb-3">Tempat Istirahat</h5>
                 <span>Selama kunjungan Anda, Anda mungkin memerlukan tempat untuk beristirahat sejenak. Taman Yamai-Atid
-                    menyediakan rumah istirahat yang nyaman, di mana Anda dapat bersantai sejenak sebelum melanjutkan
+                    menyediakan tempat istirahat yang nyaman, di mana Anda dapat bersantai sejenak sebelum melanjutkan
                     petualangan Anda.</span>
             </div>
         </div>

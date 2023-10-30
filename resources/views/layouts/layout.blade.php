@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Yamai-Atid - Zoo & Safari Park Website Template</title>
+    <title>Yamai-Atid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
@@ -111,7 +111,7 @@
                 </li>
                 @else
             </div>
-            <a href="{{ route('login') }}" class="btn btn-primary">Beli Tiket<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="{{ route('login') }}" class="btn btn-primary">Login<i class="fa fa-arrow-right ms-3"></i></a>
             @endauth
         </div>
     </nav>
@@ -126,20 +126,20 @@
     <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg col-md-6">
                     <h5 class="text-light mb-4">Lokasi </h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Maro, Kec. Merauke, Kabupaten Merauke,
                         Papua 99614</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>yamai-atid@example.com</p>
-                    <div class="d-flex pt-2">
+                    {{-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class "btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div> --}}
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg col-md-6">
                     <h5 class="text-light mb-4">Tautan Cepat</h5>
                     <a class="btn btn-link" href="#">Tentang Kami</a>
                     <a class="btn btn-link" href="#">Hubungi Kami</a>
@@ -147,15 +147,15 @@
                     <a class="btn btn-link" href="#">Syarat & Ketentuan</a>
                     <a class="btn btn-link" href="#">Dukungan</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                {{-- <div class="col-lg col-md-6">
                     <h5 class="text-light mb-4">Tautan Populer</h5>
                     <a class="btn btn-link" href="#">Tentang Kami</a>
                     <a class="btn btn-link" href="#">Hubungi Kami</a>
                     <a class="btn btn-link" href="#">Layanan Kami</a>
                     <a class="btn btn-link" href="#">Syarat & Ketentuan</a>
                     <a class="btn btn-link" href="#">Dukungan</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                </div> --}}
+                {{-- <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Berita Terbaru</h5>
                     <p>Dapatkan informasi terbaru dan penawaran khusus melalui email.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
@@ -163,7 +163,7 @@
                         <button type="button"
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Daftar</button>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="container">
                 <div class="copyright">
@@ -171,10 +171,10 @@
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">yamai-atid@example.com</a>, All Rights Reserved.
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
+                        {{-- <div class="col-md-6 text-center text-md-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
