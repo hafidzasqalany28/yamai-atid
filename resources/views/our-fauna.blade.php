@@ -20,7 +20,7 @@
                         <img class="img-fluid img-equal img-border"
                             src="{{ asset($fauna->image_path . $fauna->image_name) }}" alt="{{ $fauna->common_name }}">
                         <div class="animal-text p-4">
-                            <p class="text-white small text-uppercase mb-0">{{ $fauna->type }}</p>
+                            <p class="text-white small text-uppercase mb-0">{{ $fauna->english_translation }}</p>
                             <h5 class="text-white mb-0">{{ $fauna->common_name }}</h5>
                         </div>
                     </div>

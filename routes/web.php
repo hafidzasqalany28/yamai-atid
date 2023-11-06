@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FaunaController;
 use App\Http\Controllers\FloraController;
 use App\Http\Controllers\EntityController;
+use App\Http\Controllers\QRCodeController;
 use App\Http\Controllers\QRScanController;
 use App\Http\Controllers\AdminQRController;
 use App\Http\Controllers\BarbodeController;
@@ -43,6 +44,7 @@ Route::get('/scan-qr', [QRCodeScannerController::class, 'index'])->name('scan.qr
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('admin/entities', EntityController::class);
+    Route::post('admin/entities/generate-all-qrcodes', [QRCodeController::class, 'generateAllQRCodes'])->name('entities.generate-all-qrcodes');
     Route::get('/entities/{id}/download-qrcode', [EntityController::class, 'downloadQRCode'])->name('entities.download-qrcode');
     Route::get('/admin/barcodes', [BarcodeController::class, 'index'])->name('admin.barcodes');
 });

@@ -10,6 +10,12 @@
         <h3 class="card-title">Entities</h3>
         <div class="card-tools">
             <a href="{{ route('entities.create') }}" class="btn btn-success">Add New Entity</a>
+
+            <!-- Add button to generate all QR Codes -->
+            <form action="{{ route('entities.generate-all-qrcodes') }}" method="POST" style="display: inline;">
+                @csrf
+                <button type="submit" class="btn btn-primary">Generate All QR Codes</button>
+            </form>
         </div>
     </div>
     <div class="card-body">
@@ -33,7 +39,7 @@
                         <a href="{{ route('entities.edit', $entity) }}" class="btn btn-primary">Edit</a>
 
                         <!-- Add button to download QR Code -->
-                        <a href="{{ route('entities.download-qrcode', $entity) }}" class="btn btn-success">Download QR
+                        <a href="{{ route('entities.download-qrcode', $entity) }}" class="btn btn-success">Generate QR
                             Code</a>
 
                         <!-- Add Delete button with confirmation for deletion -->
