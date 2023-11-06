@@ -93,6 +93,8 @@
                             class="dropdown-item {{ request()->is('flora') ? 'active' : '' }}">Lihat Flora Kami</a>
                     </div>
                 </div>
+                <a href="{{ route('scan.qr') }}"
+                    class="nav-item nav-link {{ request()->is('scan-qr') ? 'active' : '' }}">Pemindaian QR Code</a>
                 @auth
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

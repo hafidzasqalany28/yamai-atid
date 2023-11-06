@@ -7,11 +7,13 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FaunaController;
 use App\Http\Controllers\FloraController;
 use App\Http\Controllers\EntityController;
+use App\Http\Controllers\QRScanController;
 use App\Http\Controllers\AdminQRController;
-use App\Http\Controllers\AdminFaunaController;
-use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\BarbodeController;
 use App\Http\Controllers\BarcodeController;
+use App\Http\Controllers\AdminFaunaController;
+use App\Http\Controllers\QRCodeScannerController;
+use App\Http\Controllers\AdminDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,8 @@ Route::get('/our-fauna', [FaunaController::class, 'index'])->name('our.fauna');
 Route::get('/fauna/{id}', [FaunaController::class, 'show'])->name('fauna.show');
 Route::get('/our-flora', [FloraController::class, 'index'])->name('our.flora');
 Route::get('/flora/{id}', [FloraController::class, 'show'])->name('flora.show');
+Route::get('/scan-qr', [QRCodeScannerController::class, 'index'])->name('scan.qr');
+
 
 
 // Grup rute admin yang hanya dapat diakses oleh pengguna dengan peran "admin"
