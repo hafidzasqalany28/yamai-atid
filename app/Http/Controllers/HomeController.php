@@ -8,22 +8,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         // Mengambil semua data dari tabel entitas
@@ -54,7 +38,7 @@ class HomeController extends Controller
 
         // Menghitung jumlah total Fauna dan Flora
         $totalQuantity = $entitasData->sum('quantity');
-        $totalVisitors = User::count(); // Gantilah dengan jumlah pengunjung yang sesungguhnya
+        $totalVisitors = User::count();
 
         return view('home', compact('faunaData', 'floraData', 'faunaCount', 'floraCount', 'totalQuantity', 'totalVisitors'));
     }

@@ -9,13 +9,13 @@ class FloraController extends Controller
 {
     public function index()
     {
-        $floraData = Entity::where('type', 'Flora')->get(); // Mengambil semua data flora
+        $floraData = Entity::where('type', 'Flora')->get();
         return view('our-flora', compact('floraData'));
     }
 
     public function show($id)
     {
-        $flora = Entity::findOrFail($id); // Mengambil data flora berdasarkan ID
+        $flora = Entity::findOrFail($id);
         return view('flora-show', compact('flora'));
     }
 }
