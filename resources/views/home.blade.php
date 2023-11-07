@@ -11,7 +11,7 @@
                 <div class="d-flex align-items-center pt-4 animated slideInDown">
                     <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Selengkapnya</a>
                     <button type="button" class="btn-play" data-bs-toggle="modal"
-                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        data-src="https://www.youtube.com/embed/RWXciwOcIss?si=4o8xPshU5sTAhajd"  data-bs-target="#videoModal">
                         <span></span>
                     </button>
                     <h6 class="text-white m-0 ms-4 d-none d-sm-block">Putar Vidio</h6>
@@ -21,13 +21,13 @@
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/elang1.jpg') }}" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/kaswari_bg.jpg') }}" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/rusatanduk.jpg') }}" alt="">
                 </div>
             </div>
         </div>

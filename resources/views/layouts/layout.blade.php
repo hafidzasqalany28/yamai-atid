@@ -49,7 +49,7 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-primary me-2"></small>
-                    <small>Senin - Minggu : 07.30 - 17.00 WIT</small>
+                    <small>Senin - Minggu : 07.30 - 19.00 WIT</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
