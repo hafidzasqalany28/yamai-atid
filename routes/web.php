@@ -45,6 +45,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('admin/entities', EntityController::class);
     Route::post('admin/entities/generate-all-qrcodes', [QRCodeController::class, 'generateAllQRCodes'])->name('entities.generate-all-qrcodes');
-    Route::get('/entities/{id}/download-qrcode', [EntityController::class, 'downloadQRCode'])->name('entities.download-qrcode');
-    Route::get('/admin/barcodes', [BarcodeController::class, 'index'])->name('admin.barcodes');
+    Route::get('entities/{id}/download-qrcode', [EntityController::class, 'downloadQRCode'])->name('entities.download-qrcode');
+    Route::get('admin/barcodes', [BarcodeController::class, 'index'])->name('admin.barcodes');
+    Route::get('admin/barcodes/download/{id}', [BarcodeController::class, 'download'])->name('admin.barcodes.download');
+    Route::get('admin/barcodes/download-all', [BarcodeController::class, 'downloadAll'])->name('admin.barcodes.download-all');
 });

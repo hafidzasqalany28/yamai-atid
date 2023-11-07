@@ -39,16 +39,15 @@
                         <a href="{{ route('entities.edit', $entity) }}" class="btn btn-primary">Edit</a>
 
                         <!-- Add button to download QR Code -->
-                        <a href="{{ route('entities.download-qrcode', $entity) }}" class="btn btn-success">Generate QR
-                            Code</a>
+                        <a href="{{ route('entities.download-qrcode', $entity->id) }}" class="btn btn-success">Generate
+                            QR Code</a>
 
                         <!-- Add Delete button with confirmation for deletion -->
                         <form action="{{ route('entities.destroy', $entity) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger"
-                                onclick="return confirm('Are you sure you want to delete this entity?')">Delete
-                            </button>
+                                onclick="return confirm('Are you sure you want to delete this entity?')">Delete</button>
                         </form>
                     </td>
                 </tr>

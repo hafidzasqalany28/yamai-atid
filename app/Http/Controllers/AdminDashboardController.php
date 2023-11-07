@@ -18,10 +18,13 @@ class AdminDashboardController extends Controller
         $totalVisitors = User::where('role', 'pengunjung')->count();
         $totalQuantity = Entity::sum('quantity');
 
-        $faunaData = Barcode::where('entity_type', 'Fauna')->paginate(3);
+        $faunaData = Entity::with('barcodes')
+            ->where('type', 'fauna')
+            ->paginate(5);
 
-        // Ambil data Flora dari tabel barcodes
-        $floraData = Barcode::where('entity_type', 'Flora')->paginate(3);
+        $floraData = Entity::with('barcodes')
+            ->where('type', 'flora')
+            ->paginate(5);
 
         return view('admin.dashboard', compact('faunaCount', 'floraCount', 'totalVisitors', 'totalQuantity', 'faunaData', 'floraData'));
     }

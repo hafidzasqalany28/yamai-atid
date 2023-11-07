@@ -15,26 +15,30 @@ class EntityController extends Controller
     public function downloadQRCode($id)
     {
         $entity = Entity::findOrFail($id);
-        $entityType = $entity->type;
+        $entityType = strtolower($entity->type); // Mengonversi ke lowercase
 
-        $routeName = $entityType === 'Fauna' ? 'fauna.show' : 'flora.show';
-        $url = route($routeName, $id);
+        $url = route("{$entityType}.show", $id); // Gunakan dynamic route
 
         $filename = "qrcode_entity_{$id}.png";
-        $path = public_path("qrcodes/{$filename}"); // Ubah path ke 'public/qrcodes'
+        $path = public_path("qrcodes/{$filename}");
 
-        $qrcode = QrCode::format('png')->size(500)->generate($url);
-        File::put($path, $qrcode);
+        // Cek apakah barcode sudah ada
+        $barcode = Barcode::where('entity_id', $id)->first();
+        if (!$barcode) {
+            $qrcode = QrCode::format('png')->size(500)->generate($url);
+            File::put($path, $qrcode);
 
-        Barcode::create([
-            'entity_type' => $entityType,
-            'entity_id' => $id,
-            'url' => $url,
-            'image_path' => "qrcodes/{$filename}", // Ubah path relatif ke 'qrcodes' di direktori public
-        ]);
+            Barcode::create([
+                'entity_type' => $entityType,
+                'entity_id' => $id,
+                'url' => $url,
+                'image_path' => "qrcodes/{$filename}",
+            ]);
+        }
 
         return redirect()->route('entities.index')->with('success', 'QR Code downloaded successfully');
     }
+
 
     public function index()
     {
@@ -134,10 +138,27 @@ class EntityController extends Controller
     public function destroy(string $id)
     {
         $entity = Entity::findOrFail($id);
+
+        // Temukan semua barcode yang terkait dengan entitas ini
+        $barcodes = Barcode::where('entity_id', $id)->get();
+
+        // Hapus semua barcode
+        foreach ($barcodes as $barcode) {
+            File::delete(public_path($barcode->image_path));
+            $barcode->delete();
+        }
+
+        // Hapus juga file QR code
+        $qrCodePath = public_path("qrcodes/qrcode_entity_{$id}.png");
+        if (File::exists($qrCodePath)) {
+            File::delete($qrCodePath);
+        }
+
+        // Setelah menghapus barcode dan file QR code, baru hapus entitas
         File::delete(public_path("{$entity->image_path}/{$entity->image_name}"));
         $entity->delete();
 
         return redirect()->route('entities.index')
-            ->with('success', 'Entity deleted successfully!');
+            ->with('success', 'Entity, related barcodes, and QR code deleted successfully!');
     }
 }

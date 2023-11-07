@@ -15,22 +15,27 @@ class QRCodeController extends Controller
         $entities = Entity::all();
 
         foreach ($entities as $entity) {
-            $routeName = $entity->type === 'Fauna' ? 'fauna.show' : 'flora.show';
-            $url = route($routeName, $entity->id);
+            $barcode = Barcode::firstOrNew([
+                'entity_id' => $entity->id,
+            ]);
 
-            $filename = "qrcode_entity_{$entity->id}.png";
-            $path = public_path("qrcodes/{$filename}");
+            if (!$barcode->exists) {
+                $routeName = $entity->type === 'Fauna' ? 'fauna.show' : 'flora.show';
+                $url = route($routeName, $entity->id);
 
-            $qrcode = QrCode::format('png')->size(500)->generate($url);
-            File::put($path, $qrcode);
+                $filename = "qrcode_entity_{$entity->id}.png";
+                $path = public_path("qrcodes/{$filename}");
 
-            if (!Barcode::where('entity_id', $entity->id)->exists()) {
-                Barcode::create([
+                if (!File::exists($path)) {
+                    $qrcode = QrCode::format('png')->size(500)->generate($url);
+                    File::put($path, $qrcode);
+                }
+
+                $barcode->fill([
                     'entity_type' => $entity->type,
-                    'entity_id' => $entity->id,
                     'url' => $url,
                     'image_path' => "qrcodes/{$filename}",
-                ]);
+                ])->save();
             }
         }
 
