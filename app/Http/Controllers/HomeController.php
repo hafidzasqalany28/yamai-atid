@@ -29,13 +29,28 @@ class HomeController extends Controller
         // Mengambil semua data dari tabel entitas
         $entitasData = Entity::all();
 
-        // Memisahkan data berdasarkan tipe (Flora atau Fauna)
-        $faunaData = $entitasData->where('type', 'Fauna');
-        $floraData = $entitasData->where('type', 'Flora');
+        // Memisahkan data berdasarkan english_translation
+        $faunaData = $entitasData->where('english_translation', 'Aves')
+            ->concat($entitasData->where('english_translation', 'Reptilia'))
+            ->concat($entitasData->where('english_translation', 'Mamalia'))
+            ->concat($entitasData->where('english_translation', 'Pisces'));
+
+        $floraData = $entitasData->where('english_translation', 'Tumbuhan Berbunga')
+            ->concat($entitasData->where('english_translation', 'Tumbuhan Berdaun Lebar'))
+            ->concat($entitasData->where('english_translation', 'Tumbuhan Ciri Khusus'));
+
+        // Ambil satu data acak dari setiap kelompok fauna dan flora
+        $faunaData = $faunaData->groupBy('english_translation')->map(function ($group) {
+            return $group->random(1)->first();
+        });
+
+        $floraData = $floraData->groupBy('english_translation')->map(function ($group) {
+            return $group->random(1)->first();
+        });
 
         // Hitung jumlah data Fauna dan Flora
-        $faunaCount = $faunaData->count();
-        $floraCount = $floraData->count();
+        $faunaCount = Entity::where('type', 'fauna')->count();
+        $floraCount = Entity::where('type', 'flora')->count();
 
         // Menghitung jumlah total Fauna dan Flora
         $totalQuantity = $entitasData->sum('quantity');

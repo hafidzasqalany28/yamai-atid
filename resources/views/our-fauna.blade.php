@@ -8,9 +8,9 @@
                 <p><span class="text-primary me-2">#</span>Our Fauna</p>
                 <h1 class="display-5 mb-0">Let's See Our <span class="text-primary">Zoofari</span> Awesome Fauna</h1>
             </div>
-            <div class="col-lg-6 text-lg-end">
+            {{-- <div class="col-lg-6 text-lg-end">
                 <a class="btn btn-primary py-3 px-5" href="#">Explore More Fauna</a>
-            </div>
+            </div> --}}
         </div>
         <div class="row g-4">
             @foreach($faunaData as $fauna)

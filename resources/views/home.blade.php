@@ -67,7 +67,8 @@
                 <h1 class="display-5 mb-4">Mengapa Anda Harus Mengunjungi Taman <span
                         class="text-primary">Yamai-Atid</span> ???</h1>
                 <p class="mb-4">Terlalu sering kita terjebak dalam hiruk-pikuk kehidupan yang akhirnya membuat kita
-                    gampang stress. Namun ketika Anda memasuki Taman Yamai-Atid, Stress anda dapat berkurang dengan melihat
+                    gampang stress. Namun ketika Anda memasuki Taman Yamai-Atid, Stress anda dapat berkurang dengan
+                    melihat
                     keanekaragaman flora dan fauna yang menyegarkan pikiran. Luangkan waktu anda dan segera
                     datang.</p>
                 <h5 class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Lingkungan Alami</h5>
@@ -205,15 +206,13 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Eksplorasi Keanekaragaman <span class="text-primary">Fauna</span> di
-                        Yamai-Atid
-                    </h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Lihat Lebih Banyak Fauna</a>
-                </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-0">Eksplorasi Keanekaragaman <span class="text-primary">Fauna</span> di
+                    Yamai-Atid
+                </h1>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a class="btn btn-primary py-3 px-5" href="{{ route('our.fauna') }}">Lihat Lebih Banyak Fauna</a>
             </div>
         </div>
         <div class="row g-4">
@@ -228,7 +227,8 @@
                                     src="{{ asset($fauna->image_path . $fauna->image_name) }}"
                                     alt="{{ $fauna->common_name }}">
                                 <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">{{ $fauna->type }}</p>
+                                    <p class="text-white small text-uppercase mb-0">{{ $fauna->english_translation }}
+                                    </p>
                                     <h5 class="text-white mb-0">{{ $fauna->common_name }}</h5>
                                 </div>
                             </div>
@@ -242,7 +242,6 @@
 </div>
 <!-- Fauna End -->
 
-
 <!-- Flora Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -253,7 +252,7 @@
                 </h1>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="#">Lihat Lebih Banyak Flora</a>
+                <a class="btn btn-primary py-3 px-5" href="{{ route('our.flora') }}">Lihat Lebih Banyak Flora</a>
             </div>
         </div>
         <div class="row g-4">
@@ -267,7 +266,8 @@
                                 <img class="img-fluid img-border img-thumbnail"
                                     src="{{ asset($flora->image_path . $flora->image_name) }}" alt="">
                                 <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">flora</p>
+                                    <p class="text-white small text-uppercase mb-0">{{ $flora->english_translation }}
+                                    </p>
                                     <h5 class="text-white mb-0">{{ $flora->common_name }}</h5>
                                 </div>
                             </div>
@@ -280,6 +280,8 @@
     </div>
 </div>
 <!-- Flora End -->
+
+
 
 <!-- Visiting Hours Start -->
 <div class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">

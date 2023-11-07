@@ -22,7 +22,7 @@
                             <span class="badge bg-primary">{{ $fauna->latin_name }}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center mb-4">
-                            English Translation
+                            Categories
                             <span class="badge bg-primary">{{ $fauna->english_translation }}</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center mb-4">
