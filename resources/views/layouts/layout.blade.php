@@ -6,7 +6,7 @@
     <title>Yamai-Atid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}">
 
