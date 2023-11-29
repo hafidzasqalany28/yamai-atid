@@ -39,8 +39,6 @@ Route::get('/flora/{id}', [FloraController::class, 'show'])->name('flora.show');
 Route::get('/scan-qr', [QRCodeScannerController::class, 'index'])->name('scan.qr');
 
 
-
-// Grup rute admin yang hanya dapat diakses oleh pengguna dengan peran "admin"
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('admin/entities', EntityController::class);

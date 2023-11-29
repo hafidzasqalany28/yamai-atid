@@ -2,37 +2,55 @@
 
 @section('content')
 <div class="container">
-    <h2 class="text-center mb-4">Pemindai QR Code</h2>
-    <div id="reader" class="mx-auto" style="width: 400px; height: 400px;"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="mb-4">Pemindai QR Code</h2>
+
+            <div class="video-container" style="border: 2px solid #ccc; padding: 10px; box-sizing: border-box;">
+                <video id="scanner" class="mx-auto" style="width: 100%; max-width: 400px; height: auto;"></video>
+            </div>
+
+            <button id="scanButton" class="btn btn-primary mt-4">
+                Scan QR Code
+            </button>
+        </div>
+
+    </div>
 </div>
 
-<!-- Font Awesome untuk ikon kamera -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/gh/mebjas/html5-qrcode@latest/dist/html5-qrcode.min.js"></script>
+<!-- Instascan Library -->
+<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
 <script>
-    function onScanSuccess(decodedText, decodedResult) {
-        // Handle on success condition with the decoded text or result.
-        console.log(`Scan result: ${decodedText}`, decodedResult);
+    // Buat instance Instascan
+    let scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
 
-        // Arahkan ke URL yang sesuai dengan hasil pemindaian
-        window.location.href = decodedText;
-    }
+    // Callback yang akan dijalankan ketika QR Code terdeteksi
+    scanner.addListener('scan', function (content) {
+        console.log('Scan result:', content);
+        window.location.href = content; // Arahkan ke URL yang sesuai dengan hasil pemindaian
+    });
 
-    var html5QrcodeScanner = new Html5QrcodeScanner(
-        "reader", { fps: 30, qrbox: 250 });
-    
-    // Callback yang akan dijalankan ketika kamera telah diinisialisasi
-    html5QrcodeScanner.render(onScanSuccess);
-
-    // Menggunakan perintah getUserMedia untuk mengaktifkan kamera
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function (stream) {
-            // Hubungkan aliran video kamera dengan elemen pemindai
-            var videoElement = document.getElementById("reader");
-            videoElement.srcObject = stream;
-        })
-        .catch(function (error) {
-            console.error("Error accessing the camera: " + error);
+    // Tombol Scan
+    document.getElementById('scanButton').addEventListener('click', function () {
+        // Menggunakan perintah getUserMedia untuk mengaktifkan kamera
+        Instascan.Camera.getCameras().then(function (cameras) {
+            // Pilih kamera belakang jika tersedia
+            const backCameras = cameras.filter(camera => camera.name.toLowerCase().includes('back'));
+            
+            if (backCameras.length > 0) {
+                const selectedCamera = backCameras[0];
+                scanner.start(selectedCamera);
+            } else if (cameras.length > 0) {
+                // Jika tidak ada kamera belakang, gunakan kamera depan pertama yang ditemukan
+                const selectedCamera = cameras[0];
+                scanner.start(selectedCamera);
+            } else {
+                console.error('No cameras found.');
+            }
+        }).catch(function (error) {
+            console.error("Error accessing the camera:", error);
         });
+    });
 </script>
 @endsection
