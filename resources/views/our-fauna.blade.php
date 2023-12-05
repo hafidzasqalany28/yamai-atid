@@ -6,8 +6,8 @@
         @foreach($groupedFauna as $category => $faunaItems)
         <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
-                <h1 class="display-5 mt-4">Let's See Our <span class="text-primary">{{ $category }}</span>
-                    Awesome Fauna</h1>
+                <h1 class="display-5 mt-4">Jelajahi Keindahan Fauna <span class="text-primary">{{ $category
+                        }}</span> Kami</h1>
             </div>
         </div>
         <div class="row g-4">
