@@ -10,8 +10,12 @@ class FaunaController extends Controller
     public function index()
     {
         $faunaData = Entity::where('type', 'fauna')->get();
-        return view('our-fauna', compact('faunaData'));
+
+        $groupedFauna = $faunaData->groupBy('english_translation');
+
+        return view('our-fauna', compact('groupedFauna'));
     }
+
     public function show($id)
     {
         $fauna = Entity::find($id);

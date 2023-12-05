@@ -3,17 +3,15 @@
 @section('content')
 <div class="container-xxl py-5">
     <div class="container">
+        @foreach($groupedFauna as $category => $faunaItems)
         <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
-                <p><span class="text-primary me-2">#</span>Our Fauna</p>
-                <h1 class="display-5 mb-0">Let's See Our <span class="text-primary">Zoofari</span> Awesome Fauna</h1>
+                <h1 class="display-5 mt-4">Let's See Our <span class="text-primary">{{ $category }}</span>
+                    Awesome Fauna</h1>
             </div>
-            {{-- <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="#">Explore More Fauna</a>
-            </div> --}}
         </div>
         <div class="row g-4">
-            @foreach($faunaData as $fauna)
+            @foreach($faunaItems as $fauna)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <a class="animal-item" href="{{ route('fauna.show', $fauna->id) }}">
                     <div class="position-relative">
@@ -28,6 +26,7 @@
             </div>
             @endforeach
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

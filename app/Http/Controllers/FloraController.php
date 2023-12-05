@@ -10,12 +10,17 @@ class FloraController extends Controller
     public function index()
     {
         $floraData = Entity::where('type', 'Flora')->get();
-        return view('our-flora', compact('floraData'));
+
+        $groupedFlora = $floraData->groupBy('english_translation');
+
+        return view('our-flora', compact('groupedFlora'));
     }
 
     public function show($id)
     {
+        // Mendapatkan data Flora berdasarkan ID
         $flora = Entity::findOrFail($id);
+
         return view('flora-show', compact('flora'));
     }
 }
