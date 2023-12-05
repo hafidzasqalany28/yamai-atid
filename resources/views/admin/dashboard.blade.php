@@ -64,7 +64,7 @@
                             <th>ID</th>
                             <th>Common Name</th>
                             <th>Local Name</th>
-                            <th>Barcode</th>
+                            <th>Barcode URL</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,7 +100,7 @@
                             <th>ID</th>
                             <th>Common Name</th>
                             <th>Local Name</th>
-                            <th>Barcode</th>
+                            <th>Barcode URL</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -399,7 +399,7 @@ class EntitySeeder extends Seeder
                 'biome' => 'Perairan',
                 'description' => 'Elang Laut atau Kidap adalah burung pemangsa yang mendiami wilayah perairan. Mereka dikenal dengan kepala putih dan ekor yang kuat. Elang Laut sering ditemukan di sepanjang pantai dan pulau-pulau kecil.',
                 'quantity' => 3,
-                'image_name' => 'elang1.jpg',
+                'image_name' => 'elanglist.jpg',
                 'image_path' => 'assets/img/',
                 'created_at' => now(),
                 'updated_at' => now(),
