@@ -45,7 +45,8 @@
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>Maro, Kec. Merauke, Kabupaten Merauke, Papua 99614</small>
+                    <a href="#" onclick="openGoogleMaps()"><small>Maro, Kec. Merauke, Kabupaten Merauke, Papua
+                            99614</small></a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-primary me-2"></small>
@@ -128,6 +129,7 @@
     <div class="container-fluid footer bg-dark text-light mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
+                <!-- Brand and Introduction -->
                 <div class="col-lg col-md-6">
                     <div class="d-flex align-items-center">
                         <img class="img-fluid me-2 mb-2" src="{{ asset('assets/img/icon/icon-10.png') }}" alt="Icon">
@@ -137,19 +139,7 @@
                     <p>Jelajahi keajaiban dunia binatang dan nikmati beragam habitat di Zoo Yamai-Atid.</p>
                 </div>
 
-                <div class="col-lg col-md-6">
-                    <h5 class="text-light mb-4">Lokasi </h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Maro, Kec. Merauke, Kabupaten Merauke,
-                        Papua 99614</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>yamai-atid@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+                <!-- Quick Links Section -->
                 <div class="col-lg col-md-6">
                     <h5 class="text-light mb-4">Tautan Cepat</h5>
                     <a class="btn btn-link" href="#">Tentang Kami</a>
@@ -158,6 +148,8 @@
                     <a class="btn btn-link" href="#">Syarat & Ketentuan</a>
                     <a class="btn btn-link" href="#">Dukungan</a>
                 </div>
+
+                <!-- Latest News Section -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Berita Terbaru</h5>
                     <p>Dapatkan informasi terbaru dan penawaran khusus melalui email.</p>
@@ -167,19 +159,43 @@
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Daftar</button>
                     </div>
                 </div>
+
+                <!-- Location Section -->
+                <div class="col-lg col-md-6">
+                    <h5 class="text-light mb-4">Lokasi </h5>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="map-container">
+                                <div id="smallMap" style="height: 150px;"></div>
+                                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                                <a href="#" onclick="openGoogleMaps()"><small>Maro, Kec. Merauke, Kabupaten Merauke,
+                                        Papua
+                                        99614</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>yamai-atid@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Copyright Section -->
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mt-3 mb-md-0">
                     &copy; <a class="border-bottom" href="#">yamai-atid@example.com</a>, All Rights Reserved.
                 </div>
-                {{-- <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                </div> --}}
             </div>
         </div>
     </div>
     <!-- Footer End -->
+
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -196,6 +212,32 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJFNqhD2locnPdldlbynk_sT7aFMDaw_w&callback=initMap">
+    </script>
+
+    <script>
+        // Function to initialize the small map
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('smallMap'), {
+            center: {lat: -8.4830417, lng: 140.3907535},
+            zoom: 14,
+        });
+
+        // Add a marker for your zoo location
+        var marker = new google.maps.Marker({
+            position: {lat: -8.4830417, lng: 140.3907535},
+            map: map,
+            title: 'Zoo Location'
+        });
+    }
+
+    // Function to open Google Maps
+    function openGoogleMaps() {
+        window.open('https://www.google.com/maps/place/Taman+Satwa/@-8.4830364,140.3881732,17z/data=!3m1!4b1!4m6!3m5!1s0x69b53fb2e47cb9bb:0xea92dce51fb12075!8m2!3d-8.4830417!4d140.3907535!16s%2Fg%2F11gm7f4tls?hl=id&entry=ttu', '_blank');
+    }
+    </script>
 </body>
 
 </html>
