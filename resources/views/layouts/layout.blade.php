@@ -213,8 +213,7 @@
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJFNqhD2locnPdldlbynk_sT7aFMDaw_w&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap">
     </script>
 
     <script>
