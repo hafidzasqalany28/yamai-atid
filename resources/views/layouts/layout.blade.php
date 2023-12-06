@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('/img/favicon.ico') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +22,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="{{ asset('assets/lib/animate/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/animate/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/lightbox/css/lightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/lib/owlcarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-primary me-2"></small>
-                    <small>Senin - Minggu : 07.30 - 19.00 WIT</small>
+                    <small>Senin - Minggu : 08.00 - 22.00 WIT</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -75,7 +75,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s">
         <a href="/" class="navbar-brand p-0">
-            <img class="img-fluid me-3" src="{{ asset('assets/img/icon/icon-10.png') }}" alt="Icon">
+            <img class="img-fluid me-3" src="{{ asset('/img/icon/icon-10.png') }}" alt="Icon">
             <h1 class="m-0 text-primary">Yamai-Atid</h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -132,7 +132,7 @@
                 <!-- Brand and Introduction -->
                 <div class="col-lg col-md-6">
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid me-2 mb-2" src="{{ asset('assets/img/icon/icon-10.png') }}" alt="Icon">
+                        <img class="img-fluid me-2 mb-2" src="{{ asset('/img/icon/icon-10.png') }}" alt="Icon">
                         <h1 class="m-0 text-primary mb-2">Yamai-Atid</h1>
                     </div>
                     <p class="text-light">Temukan Keindahan Satwa Liar</p>
@@ -203,15 +203,15 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('/js/main.js') }}"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap">
     </script>

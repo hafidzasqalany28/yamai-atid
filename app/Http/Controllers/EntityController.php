@@ -66,7 +66,7 @@ class EntityController extends Controller
         if ($request->hasFile('image_name')) {
             $image = $request->file('image_name');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $imagePath = 'assets/img';
+            $imagePath = 'img';
             $image->move(public_path($imagePath), $imageName);
 
             Entity::create(array_merge($request->all(), [
@@ -110,7 +110,7 @@ class EntityController extends Controller
                 'image_name' => 'required|image|mimes:jpeg,png,jpg,gif',
             ]);
 
-            $imagePath = 'assets/img/';
+            $imagePath = 'img/';
             $image = $request->file('image_name');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path($imagePath), $imageName);

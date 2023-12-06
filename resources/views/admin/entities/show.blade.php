@@ -15,7 +15,7 @@
                     'Common Name' => $entity->common_name,
                     'Local Name' => $entity->local_name,
                     'Latin Name' => $entity->latin_name,
-                    'English Translation' => $entity->english_translation,
+                    'Category' => $entity->english_translation,
                     'Biome' => $entity->biome,
                     'Description' => $entity->description,
                     'Quantity' => $entity->quantity,
@@ -35,8 +35,8 @@
                     <div class="card">
                         <div class="card-body p-2">
                             <p><strong>Image:</strong></p>
-                            <img src="{{ $entity->image_url }}" alt="{{ $entity->image_name }} Image"
-                                class="img-fluid img-thumbnail">
+                            <img src="{{ asset($entity->image_path . '/' . $entity->image_name) }}"
+                                alt="{{ $entity->image_name }} Image" class="img-fluid img-thumbnail">
                         </div>
                     </div>
                     @else

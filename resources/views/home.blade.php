@@ -11,7 +11,8 @@
                 <div class="d-flex align-items-center pt-4 animated slideInDown">
                     <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Selengkapnya</a>
                     <button type="button" class="btn-play" data-bs-toggle="modal"
-                        data-src="https://www.youtube.com/embed/RWXciwOcIss?si=4o8xPshU5sTAhajd"  data-bs-target="#videoModal">
+                        data-src="https://www.youtube.com/embed/RWXciwOcIss?si=4o8xPshU5sTAhajd"
+                        data-bs-target="#videoModal">
                         <span></span>
                     </button>
                     <h6 class="text-white m-0 ms-4 d-none d-sm-block">Putar Vidio</h6>
@@ -21,13 +22,13 @@
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/elang1.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('/img/elang1.jpg') }}" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/kaswari_bg.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('/img/kaswari_bg.jpg') }}" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ asset('assets/img/rusatanduk.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('/img/rusatanduk.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -79,7 +80,7 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="img-border">
-                    <img class="img-fluid" src="{{ asset('assets/img/rusa1.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('/img/rusa1.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -139,13 +140,13 @@
         </div>
         <div class="row gy-5 gx-4">
             {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-2.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-2.png') }}" alt="Ikon">
                 <h5 class="mb-3">Parkir lot</h5>
                 <span>Kenyamanan Anda adalah prioritas kami. Nikmati parkir lot gratis yang tersedia di Taman
                     Yamai-Atid, sehingga Anda dapat menikmati pengalaman tanpa masalah mencari tempat parkir</span>
             </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-3.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-3.png') }}" alt="Ikon">
                 <h5 class="mb-3">Swafoto & QR Code</h5>
                 <span>Dalam petualangan seru di Taman Yamai-Atid, abadikan momen Anda dengan foto-foto indah flora
                     maupun fauna
@@ -154,41 +155,41 @@
             </div>
 
             {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-4.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-4.png') }}" alt="Ikon">
                 <h5 class="mb-3">Layanan Pemandu</h5>
                 <span>Tidak perlu khawatir saat menjelajah. Kami menyediakan layanan pemandu profesional yang akan
                     membimbing Anda sepanjang perjalanan Anda di Taman Yamai-Atid. Dapatkan informasi lengkap dan
                     pengetahuan yang mendalam tentang keanekaragaman hayati.</span>
             </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-5.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-5.png') }}" alt="Ikon">
                 <h5 class="mb-3">Makanan & Minuman</h5>
                 <span>Menikmati petualangan memang melelahkan. Nikmati makanan dan minuman lezat yang tersedia di Taman
                     Yamai-Atid. Terdapat berbagai pilihan menu yang memuaskan selera.</span>
             </div>
             {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-6.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-6.png') }}" alt="Ikon">
                 <h5 class="mb-3">Toko Souvenir</h5>
                 <span>Bawa pulang kenangan dari petualangan Anda di Taman Yamai-Atid. Jelajahi berbagai pilihan produk
                     suvenir di toko kami, yang memungkinkan Anda membawa pulang potongan kecil dari keindahan
                     alam.</span>
             </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-7.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-7.png') }}" alt="Ikon">
                 <h5 class="mb-3">Wi-Fi Cepat & Gratis</h5>
                 <span>Kami mengerti bahwa Anda mungkin ingin tetap terhubung. Nikmati akses internet Wi-Fi cepat dan
                     gratis di seluruh Taman Yamai-Atid, sehingga Anda dapat tetap terhubung dengan dunia digital selama
                     petualangan Anda.</span>
             </div>
             {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-8.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-8.png') }}" alt="Ikon">
                 <h5 class="mb-3">Area Bermain</h5>
                 <span>Bagi keluarga yang berkunjung bersama anak-anak, Taman Yamai-Atid memiliki area bermain yang
                     menyenangkan. Biarkan anak-anak Anda bermain dan bersenang-senang di area yang aman dan menyenangkan
                     ini.</span>
             </div> --}}
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <img class="img-fluid mb-3" src="{{ asset('assets/img/icon/icon-9.png') }}" alt="Ikon">
+                <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-9.png') }}" alt="Ikon">
                 <h5 class="mb-3">Tempat Istirahat</h5>
                 <span>Selama kunjungan Anda, Anda mungkin memerlukan tempat untuk beristirahat sejenak. Taman Yamai-Atid
                     menyediakan tempat istirahat yang nyaman, di mana Anda dapat bersantai sejenak sebelum melanjutkan
@@ -292,31 +293,31 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         <span>Senin</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Selasa</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Rabu</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Kamis</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Jumat</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Sabtu</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                     <li class="list-group-item">
                         <span>Minggu</span>
-                        <span>07:30 - 17:00 WIT</span>
+                        <span>08:00 - 22:00 WIT</span>
                     </li>
                 </ul>
             </div>

@@ -17,7 +17,7 @@
             'common_name' => 'Common Name',
             'local_name' => 'Local Name',
             'latin_name' => 'Latin Name',
-            'english_translation' => 'English Translation',
+            'english_translation' => 'Category',
             'biome' => 'Biome',
             'description' => 'Entity Description',
             'quantity' => 'Quantity',
