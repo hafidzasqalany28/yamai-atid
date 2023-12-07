@@ -34,7 +34,7 @@ class EntitySeeder extends Seeder
                 'biome' => 'Hutan',
                 'description' => 'Bunga dolar (Eucalyptus globulus) adalah pohon besar dengan daun berbentuk mata uang. Mereka tumbuh di hutan-hutan dan memiliki aroma segar yang khas. Pohon ini sering digunakan dalam industri kayu dan minyak esensial.',
                 'quantity' => 75,
-                'image_name' => 'dolar.jpeg',
+                'image_name' => 'dolar.png',
                 'image_path' => 'img/',
                 'created_at' => now(),
                 'updated_at' => now(),
