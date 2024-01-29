@@ -47,11 +47,9 @@ class BarcodeController extends Controller
             foreach ($barcodes as $barcode) {
                 $qrCodePath = public_path("qrcodes/qrcode_entity_{$barcode->entity_id}.png");
 
-
                 $entityName = Entity::where('id', $barcode->entity_id)->pluck('common_name')->first();
 
-
-                if (strpos($qrCodePath, "\0") === false) {
+                if (file_exists($qrCodePath)) {
                     $pdf = new TCPDF();
                     $pdf->setPrintHeader(false);
                     $pdf->setPrintFooter(false);
@@ -62,10 +60,8 @@ class BarcodeController extends Controller
                     $pdf->Cell(0, 10, "{$entityName}", 0, 1, 'C');
                     $pdf->Image($qrCodePath, $x = 55, $y = 40, $w = 100);
 
-
                     $zip->addFromString("qrcodes/qrcode_entity_{$barcode->entity_id}.pdf", $pdf->Output('qrcode.pdf', 'S'));
                 } else {
-
                     $zip->close();
                     return redirect()->route('admin.barcodes.index')->with('error', 'Error: Invalid file path');
                 }

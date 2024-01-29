@@ -139,12 +139,12 @@
             </div>
         </div>
         <div class="row gy-5 gx-4">
-            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-2.png') }}" alt="Ikon">
-                <h5 class="mb-3">Parkir lot</h5>
-                <span>Kenyamanan Anda adalah prioritas kami. Nikmati parkir lot gratis yang tersedia di Taman
+                <h5 class="mb-3">Lahan Parkir</h5>
+                <span>Kenyamanan Anda adalah prioritas kami. Nikmati lahan parkir gratis yang tersedia di Taman
                     Yamai-Atid, sehingga Anda dapat menikmati pengalaman tanpa masalah mencari tempat parkir</span>
-            </div> --}}
+            </div> 
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-3.png') }}" alt="Ikon">
                 <h5 class="mb-3">Swafoto & QR Code</h5>
@@ -154,26 +154,26 @@
                     fauna dengan QR Code kami.</span>
             </div>
 
-            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-4.png') }}" alt="Ikon">
                 <h5 class="mb-3">Layanan Pemandu</h5>
                 <span>Tidak perlu khawatir saat menjelajah. Kami menyediakan layanan pemandu profesional yang akan
                     membimbing Anda sepanjang perjalanan Anda di Taman Yamai-Atid. Dapatkan informasi lengkap dan
                     pengetahuan yang mendalam tentang keanekaragaman hayati.</span>
-            </div> --}}
+            </div> 
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-5.png') }}" alt="Ikon">
                 <h5 class="mb-3">Makanan & Minuman</h5>
                 <span>Menikmati petualangan memang melelahkan. Nikmati makanan dan minuman lezat yang tersedia di Taman
                     Yamai-Atid. Terdapat berbagai pilihan menu yang memuaskan selera.</span>
             </div>
-            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-6.png') }}" alt="Ikon">
                 <h5 class="mb-3">Toko Souvenir</h5>
                 <span>Bawa pulang kenangan dari petualangan Anda di Taman Yamai-Atid. Jelajahi berbagai pilihan produk
                     suvenir di toko kami, yang memungkinkan Anda membawa pulang potongan kecil dari keindahan
                     alam.</span>
-            </div> --}}
+            </div> 
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-7.png') }}" alt="Ikon">
                 <h5 class="mb-3">Wi-Fi Cepat & Gratis</h5>
@@ -181,13 +181,13 @@
                     gratis di seluruh Taman Yamai-Atid, sehingga Anda dapat tetap terhubung dengan dunia digital selama
                     petualangan Anda.</span>
             </div>
-            {{-- <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-8.png') }}" alt="Ikon">
                 <h5 class="mb-3">Area Bermain</h5>
                 <span>Bagi keluarga yang berkunjung bersama anak-anak, Taman Yamai-Atid memiliki area bermain yang
                     menyenangkan. Biarkan anak-anak Anda bermain dan bersenang-senang di area yang aman dan menyenangkan
                     ini.</span>
-            </div> --}}
+            </div> 
             <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <img class="img-fluid mb-3" src="{{ asset('/img/icon/icon-9.png') }}" alt="Ikon">
                 <h5 class="mb-3">Tempat Istirahat</h5>
@@ -201,6 +201,46 @@
 </div>
 </div>
 <!-- Service End -->
+
+<!-- Prohibited Items Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-12">
+               <h1 class="display-5 mb-4">Hal yang <span class="text-danger">Dilarang</span> di Taman <span class="text-primary">Yamai-Atid</span></h1>
+            </div>
+        </div>
+        <div class="row gy-5 gx-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <i class="fas fa-utensils fa-3x mb-3 text-danger"></i>
+                <h5 class="mb-3">Membawa Makanan & Minuman</h5>
+                <span>Dilarang membawa makanan atau minuman dari luar. Kami ingin memastikan kenyamanan dan kebersihan Taman Yamai-Atid untuk semua pengunjung.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <i class="fas fa-smoking fa-3x mb-3 text-danger"></i>
+                <h5 class="mb-3">Merokok</h5>
+                <span>Dilarang merokok di area Taman. Untuk menjaga udara segar dan kesehatan pengunjung, mari bersama-sama menciptakan lingkungan bebas asap rokok.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <i class="fas fa-leaf fa-3x mb-3 text-danger"></i>
+                <h5 class="mb-3">Merusak Flora/Tanaman</h5>
+                <span>Dilarang merusak flora atau tanaman di Taman Yamai-Atid. Kami menghargai keberagaman hayati dan keindahan alam, oleh karena itu, tolong jaga kelestarian flora dan tanaman yang ada.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <i class="fas fa-paw fa-3x mb-3 text-danger"></i>
+                <h5 class="mb-3">Mengganggu Fauna / Satwa</h5>
+                <span>Dilarang mengganggu fauna atau satwa di Taman Yamai-Atid. Hormati keberadaan dan habitat alaminya untuk menjaga keseimbangan ekosistem.</span>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+                <i class="fas fa-trash-alt fa-3x mb-3 text-danger"></i>
+                <h5 class="mb-3">Membuang Sampah Sembarangan</h5>
+                <span>Dilarang membuang sampah sembarangan di Taman Yamai-Atid. Mari kita jaga keindahan taman ini dengan membuang sampah pada tempatnya dan menjaga kebersihan bersama.</span>
+            </div>
+        </div>
+        <!-- Tambahkan larangan lainnya sesuai kebijakan Taman Anda -->
+    </div>
+</div>
+<!-- Prohibited Items Section End -->
 
 
 <!-- Fauna Start -->

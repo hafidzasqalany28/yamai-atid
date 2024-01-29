@@ -19,7 +19,7 @@ class EntityController extends Controller
         $filename = "qrcode_entity_{$id}.png";
         $path = public_path("qrcodes/{$filename}");
 
-        // Cek apakah barcode sudah ada
+        // Check if barcode already exists
         $barcode = Barcode::where('entity_id', $id)->first();
         if (!$barcode) {
             $qrcode = QrCode::format('png')->size(500)->generate($url);
@@ -67,7 +67,7 @@ class EntityController extends Controller
             $image = $request->file('image_name');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $imagePath = 'img';
-            $image->move(public_path($imagePath), $imageName);
+            $image->move(($imagePath), $imageName);
 
             Entity::create(array_merge($request->all(), [
                 'image_name' => $imageName,
@@ -113,9 +113,9 @@ class EntityController extends Controller
             $imagePath = 'img/';
             $image = $request->file('image_name');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path($imagePath), $imageName);
+            $image->move(($imagePath), $imageName);
 
-            File::delete(public_path("{$entity->image_path}/{$entity->image_name}"));
+            File::delete(("{$entity->image_path}/{$entity->image_name}"));
 
             $entity->update(array_merge($request->all(), [
                 'image_name' => $imageName,
